@@ -1,0 +1,12 @@
+{
+    "name": "hdelima/AppMax",
+    "description": "Appmax Gateway Provider",
+    "authors": [
+        {
+            "name": "hdelima",
+            "email": "hebert.dev@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
