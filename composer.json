@@ -18,7 +18,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Hdelima\\AppMax": "src/"
+      "Hdelima\\AppMax\\": "src/"
     }
   },
   "require": {
