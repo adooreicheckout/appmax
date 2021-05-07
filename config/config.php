@@ -21,7 +21,7 @@ return [
 	
 	'mode' => env('APPMAX_MODE', 'sandbox'),
 
-	'notify_url' => env('APPMAX_NOTIFY_URL', url('appmax/notifications')),
+	'notify_url' => env('APPMAX_NOTIFY_URL', 'appmax/notifications'),
 
 	'store_name' => env('APPMAX_STORE_NAME', 'AppMax'),
 
