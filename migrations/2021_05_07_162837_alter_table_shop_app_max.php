@@ -17,8 +17,8 @@ class AlterTableShopAppMax extends Migration
 			throw new Exception('Table "shops" was not found!');
 			
 		Schema::table('shops', function( Blueprint $table ) {
-			$table->string('appmax_enabled');
-			$table->string('appmax_mode');
+			$table->boolean('appmax_enabled')->default(0);
+			$table->boolean('appmax_mode')->default(0);
 			$table->string('appmax_store_name');
 			$table->string('appmax_access_token');
 			$table->string('appmax_additional_interest_rate');
