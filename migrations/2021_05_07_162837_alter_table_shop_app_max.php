@@ -22,7 +22,8 @@ class AlterTableShopAppMax extends Migration
 			$table->string('appmax_store_name')->nullable();
 			$table->string('appmax_access_token')->nullable();
 			$table->string('appmax_access_token')->nullable();
-			$table->string('appmax_boleto_enabled')->nullable();
+			$table->boolean('appmax_boleto_enabled')->nullable();
+			$table->boolean('appmax_card_enabled')->nullable();
 			$table->string('appmax_additional_interest_rate')->nullable();
 		});
     }
@@ -42,7 +43,8 @@ class AlterTableShopAppMax extends Migration
 					'appmax_store_name',
 					'appmax_access_token',
 					'appmax_additional_interest_rate',
-					'appmax_boleto_enabled'
+					'appmax_boleto_enabled',
+					'appmax_card_enabled'
 				);
 			});
 		}
