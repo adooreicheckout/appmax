@@ -19,6 +19,7 @@ trait Order
 			'products.*.name'	=> 'required|max:255',
 			'products.*.qty'	=> 'required|integer',
 			'products.*.price' 	=> 'required_without:total',
+			'products.*.weight'	=> 'nullable',
 			'shipping'			=> 'nullable|numeric',
 			'customer_id'		=> 'required|integer',
 			'discount'			=> 'nullable|numeric',
