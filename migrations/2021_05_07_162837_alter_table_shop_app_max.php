@@ -21,7 +21,6 @@ class AlterTableShopAppMax extends Migration
 			$table->boolean('appmax_mode')->default(0);
 			$table->string('appmax_store_name')->nullable();
 			$table->string('appmax_access_token')->nullable();
-			$table->string('appmax_access_token')->nullable();
 			$table->boolean('appmax_boleto_enabled')->nullable();
 			$table->boolean('appmax_card_enabled')->nullable();
 			$table->string('appmax_additional_interest_rate')->nullable();
