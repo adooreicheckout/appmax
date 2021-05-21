@@ -10,7 +10,7 @@ trait AppMaxApi
 	use AppMaxApi\Payment;
 	use AppMaxApi\TokenCreditCard;
 	use AppMaxApi\UpSell;
-	use AppMaxApi\ReFund;
+	use AppMaxApi\Refund;
 	use AppMaxApi\Tracking;
 
 	public function setAccessToken()
