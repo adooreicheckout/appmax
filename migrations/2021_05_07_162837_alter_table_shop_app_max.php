@@ -13,18 +13,17 @@ class AlterTableShopAppMax extends Migration
      */
     public function up()
     {
-		if( !Schema::hasTable('shops') )
-			throw new Exception('Table "shops" was not found!');
-			
-		Schema::table('shops', function( Blueprint $table ) {
-			$table->boolean('appmax_enabled')->default(0);
-			$table->boolean('appmax_mode')->default(0);
-			$table->string('appmax_store_name')->nullable();
-			$table->string('appmax_access_token')->nullable();
-			$table->boolean('appmax_boleto_enabled')->nullable();
-			$table->boolean('appmax_card_enabled')->nullable();
-			$table->string('appmax_additional_interest_rate')->nullable();
-		});
+		if( Schema::hasTable('shops') ) {
+			Schema::table('shops', function( Blueprint $table ) {
+				$table->boolean('appmax_enabled')->default(0);
+				$table->boolean('appmax_mode')->default(0);
+				$table->string('appmax_store_name')->nullable();
+				$table->string('appmax_access_token')->nullable();
+				$table->boolean('appmax_boleto_enabled')->nullable();
+				$table->boolean('appmax_card_enabled')->nullable();
+				$table->string('appmax_additional_interest_rate')->nullable();
+			});
+		}
     }
 
     /**
