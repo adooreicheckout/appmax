@@ -12,6 +12,7 @@ trait AppMaxApi
 	use AppMaxApi\UpSell;
 	use AppMaxApi\Refund;
 	use AppMaxApi\Tracking;
+	use AppMaxApi\Notification;
 
 	public function setAccessToken()
 	{
