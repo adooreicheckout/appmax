@@ -12,6 +12,4 @@ use Hdelima\AppMax\Controllers\AppMaxNotificationController;
 |
 */
 
-Route::get('appmax/notifications', [ AppMaxNotificationController::class, 'index' ] );
-
-Route::post('appmax/notifications', [ AppMaxNotificationController::class, 'store' ] );
+Route::apiResource('app-max/notifications', AppMaxNotificationController::class);
