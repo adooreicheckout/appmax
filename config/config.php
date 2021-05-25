@@ -21,9 +21,9 @@ return [
 	
 	'mode' => env('APPMAX_MODE', 'sandbox'),
 
-	'notify_url' => env('APPMAX_NOTIFY_URL', 'appmax/notifications'),
-
 	'store_name' => env('APPMAX_STORE_NAME', 'AppMax'),
 
 	'token' => env('APPMAX_TOKEN', ''),
+
+	'limit_per_page' => 15
 ];
