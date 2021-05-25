@@ -29,8 +29,6 @@ class AppMax {
 		if( $this->mode === 'production' ) 
 			$this->config['api_url'] = 'https://admin.appmax.com.br';
 		
-		$this->config['notify_url'] = $credentials['notify_url'];
-
 		if ( empty( $credentials['token'] ) )
 			throw new RuntimeException("Please provide valid Access-Token for $credentials[store_name] store to use AppMax API.");
 

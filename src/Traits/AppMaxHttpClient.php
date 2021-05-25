@@ -16,8 +16,6 @@ trait AppMaxHttpClient {
 
 	private $endpoint;
 
-	private $notifyUrl;
-
 	private $bodyParams;
 
 	protected $verb = 'post';
@@ -57,8 +55,6 @@ trait AppMaxHttpClient {
 		$this->setClient();
 
 		$this->setDefaultValues();
-
-		$this->notifyUrl = $this->config['notify_url'];
 	}
 
 	private function setDefaultValues()
