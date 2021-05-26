@@ -39,8 +39,6 @@ trait Payment
 		
 		$this->setAccessToken();
 
-		return $this;
-		
-		// return $this->doAppMaxRequest();
+		return $this->doAppMaxRequest();
     }
 }
