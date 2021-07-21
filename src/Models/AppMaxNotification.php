@@ -1,6 +1,6 @@
 <?php
 
-namespace Hdelima\AppMax\models;
+namespace Hdelima\AppMax\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
