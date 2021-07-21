@@ -3,8 +3,8 @@
 namespace Hdelima\AppMax\Traits\AppMaxApi;
 
 trait Notification {
-	
-	public function getNotifications(int $page = 1, int $limit = 15 ) 
+
+	public function getNotifications(int $page = 1, int $limit = 15 )
 	{
 		$this->endpoint = sprintf('app-max/notifications?page=%s&limit=%s', $page, $limit );
 
@@ -15,7 +15,7 @@ trait Notification {
 		return $this->doAppMaxRequest();
 	}
 
-	public function showNotification( int $id ) 
+	public function showNotification( int $id )
 	{
 		$this->endpoint = sprintf('app-max/notifications/%s', $id );
 
@@ -25,8 +25,8 @@ trait Notification {
 
 		return $this->doAppMaxRequest();
 	}
-	
-	public function deleteNotification( int $id ) 
+
+	public function deleteNotification( int $id )
 	{
 		$this->endpoint = sprintf('app-max/notifications/%s', $id );
 
@@ -36,14 +36,14 @@ trait Notification {
 
 		return $this->doAppMaxRequest();
 	}
-	
-	public function updateNotification( int $id, array $data ) 
+
+	public function updateNotification( int $id, array $data )
 	{
 		$this->endpoint = sprintf('app-max/notifications/%s', $id );
 
 		$this->url = collect([ url('/'), $this->endpoint ])->implode('/');
 
-		$this->verb = 'POST';
+		$this->verb = 'PATCH';
 
 		$this->validate($data, [
 			'environment' 	=> 'nullable',
