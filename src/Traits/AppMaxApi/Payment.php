@@ -14,7 +14,7 @@ trait Payment
 		$this->endpoint = 'api/v3/payment'. $payment ;
 
 		$this->url = collect([ $this->config['api_url'], $this->endpoint ])->implode('/');
-        
+
         $this->verb = 'POST';
 
 		$this->validate( $data, [
@@ -23,7 +23,7 @@ trait Payment
 			'payment.CreditCard'						=> 'required_without:payment.Boleto',
 			'payment.CreditCard.token'					=> 'nullable',
 			'payment.CreditCard.upsell_hash'			=> 'nullable',
-			'payment.CreditCard.number'					=> 'required_without_all:payment.CreditCard.token,payment.Boleto|size:16',
+			'payment.CreditCard.number'					=> 'required_without_all:payment.CreditCard.token,payment.Boleto|min:9',
 			'payment.CreditCard.cvv'					=> 'required_with:payment.CreditCard.number|between:2,4',
 			'payment.CreditCard.month'					=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.year'					=> 'required_with:payment.CreditCard.number|integer',
@@ -36,7 +36,7 @@ trait Payment
 		]);
 
 		$this->options[ 'json' ] = $data;
-		
+
 		$this->setAccessToken();
 
 		return $this->doAppMaxRequest();
