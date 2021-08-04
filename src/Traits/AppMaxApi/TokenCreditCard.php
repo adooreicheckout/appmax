@@ -14,7 +14,7 @@ trait TokenCreditCard
 
 		$this->validate($data, [
 			'card.name'				=> 'nullable|min:1',
-			'card.number'			=> 'required|size:16',
+			'card.number'			=> 'required|string',
 			'card.cvv'				=> 'required|min:2|max:4',
 			'card.month'			=> 'required|integer',
 			'card.year'				=> 'required|integer',

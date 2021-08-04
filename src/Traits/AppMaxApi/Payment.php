@@ -23,14 +23,14 @@ trait Payment
 			'payment.CreditCard'						=> 'required_without:payment.Boleto',
 			'payment.CreditCard.token'					=> 'nullable',
 			'payment.CreditCard.upsell_hash'			=> 'nullable',
-			'payment.CreditCard.number'					=> 'required_without_all:payment.CreditCard.token,payment.Boleto|min:9',
-			'payment.CreditCard.cvv'					=> 'required_with:payment.CreditCard.number|between:2,4',
+			'payment.CreditCard.number'					=> 'required_without_all:payment.CreditCard.token,payment.Boleto',
+			'payment.CreditCard.cvv'					=> 'required_with:payment.CreditCard.number|integer|between:2,4',
 			'payment.CreditCard.month'					=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.year'					=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.document_number'		=> 'required_with:payment.CreditCard.number|size:11',
-			'payment.CreditCard.name'					=> 'nullable|min:1',
+			'payment.CreditCard.name'					=> 'nullable|min:1|string',
 			'payment.CreditCard.installments'			=> 'required_with:payment.CreditCard.number|integer',
-			'payment.CreditCard.soft_descriptor'		=> 'nullable|max:13',
+			'payment.CreditCard.soft_descriptor'		=> 'nullable|string|max:13',
 			'payment.Boleto'							=> 'required_without:payment.CreditCard',
 			'payment.Boleto.document_number'			=> 'required_without:payment.CreditCard|size:11'
 		]);

@@ -13,10 +13,10 @@ trait UpSell
         $this->verb = 'POST';
 
 		$this->validate( $data, [
-			'hash' 				=> 'required|size:45',
+			'hash' 				=> 'required|string',
 			'products'			=> 'required',
-			'products.*.sku'	=> 'required|max:100',
-			'products.*.name'	=> 'required|max:255',
+			'products.*.sku'	=> 'required|string|max:100',
+			'products.*.name'	=> 'required|string|max:255',
 			'products.*.qty'	=> 'required|integer',
 			'overwrite_cart'	=> 'required|boolean',
 			'installments'		=> 'nullable|integer',
