@@ -16,8 +16,8 @@ trait TokenCreditCard
 			'card.name'				=> 'nullable|min:1',
 			'card.number'			=> 'required|string',
 			'card.cvv'				=> 'required|string',
-			'card.month'			=> 'required|string',
-			'card.year'				=> 'required|string',
+			'card.month'			=> 'required|integer',
+			'card.year'				=> 'required|integer',
 		]);
 
 		$this->options[ 'json' ] = $data;
