@@ -24,7 +24,7 @@ trait Payment
 			'payment.CreditCard.token'					=> 'nullable',
 			'payment.CreditCard.upsell_hash'			=> 'nullable',
 			'payment.CreditCard.number'					=> 'required_without_all:payment.CreditCard.token,payment.Boleto',
-			'payment.CreditCard.cvv'					=> 'required_with:payment.CreditCard.number|integer|between:2,4',
+			'payment.CreditCard.cvv'					=> 'required_with:payment.CreditCard.number|string',
 			'payment.CreditCard.month'					=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.year'					=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.document_number'		=> 'required_with:payment.CreditCard.number|size:11',
