@@ -32,7 +32,11 @@ trait Payment
 			'payment.CreditCard.installments'			=> 'required_with:payment.CreditCard.number|integer',
 			'payment.CreditCard.soft_descriptor'		=> 'nullable|max:13',
 			'payment.Boleto'							=> 'required_without:payment.CreditCard',
-			'payment.Boleto.document_number'			=> 'required_without:payment.CreditCard|size:11'
+			'payment.Boleto.document_number'			=> 'required_with:payment.Boleto|size:11',
+            'payment.Pix'                               => 'required_without:payment.CreditCard,payment.Boleto',
+            'payment.Pix.document_number'               => 'required_with:payment.Pix|size:11',
+            'payment.Pix.expiration_date'               => 'nullable',
+
 		]);
 
 		$this->options[ 'json' ] = $data;
