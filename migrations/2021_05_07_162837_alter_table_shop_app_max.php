@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class AlterTableShopAppMax extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
 		if( Schema::hasTable('shops') ) {
@@ -26,17 +21,12 @@ class AlterTableShopAppMax extends Migration
 		}
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
 		if( Schema::hasTable('shops') ) {
 			Schema::table('shops', function (Blueprint $table) {
 				$table->dropColumn(
-					'appmax_enabled', 
+					'appmax_enabled',
 					'appmax_mode',
 					'appmax_store_name',
 					'appmax_access_token',

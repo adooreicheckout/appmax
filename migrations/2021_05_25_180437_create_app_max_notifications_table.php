@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAppMaxNotificationsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('app_max_notifications', function (Blueprint $table) {
@@ -23,11 +18,6 @@ class CreateAppMaxNotificationsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('app_max_notifications');

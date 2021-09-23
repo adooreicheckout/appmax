@@ -7,23 +7,23 @@ trait TokenCreditCard
     public function createTokenCreditCard(array $data)
     {
         $this->endpoint = 'api/v3/tokenize/card';
-        
+
 		$this->url = collect([ $this->config['api_url'], $this->endpoint ])->implode('/');
 
         $this->verb = 'POST';
 
 		$this->validate($data, [
 			'card.name'				=> 'nullable|min:1',
-			'card.number'			=> 'required|string',
-			'card.cvv'				=> 'required|integer',
+			'card.number'			=> 'required|size:16',
+			'card.cvv'				=> 'required|string',
 			'card.month'			=> 'required|integer',
 			'card.year'				=> 'required|integer',
 		]);
 
 		$this->options[ 'json' ] = $data;
-		
+
 		$this->setAccessToken();
-		
+
 		return $this->doAppMaxRequest();
     }
 }
