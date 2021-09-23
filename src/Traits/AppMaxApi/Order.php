@@ -15,10 +15,10 @@ trait Order
 
 		$this->validate( $data, [
 			'total' 			=> 'required_without:products.*.price',
-			'products.*.sku'	=> 'required|max:100',
-			'products.*.name'	=> 'required|max:255',
+			'products.*.sku'	=> 'required|string|max:100',
+			'products.*.name'	=> 'required|string|max:255',
 			'products.*.qty'	=> 'required|integer',
-			'products.*.price' 	=> 'required_without:total',
+			'products.*.price' 	=> 'required_without:total|numeric',
 			'products.*.weight'	=> 'nullable',
 			'shipping'			=> 'nullable|numeric',
 			'customer_id'		=> 'required|integer',
