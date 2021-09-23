@@ -4,7 +4,7 @@ namespace Hdelima\AppMax\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Hdelima\AppMax\models\AppMaxNotification;
+use Hdelima\AppMax\Models\AppMaxNotification;
 
 class AppMaxNotificationController extends Controller
 {
@@ -29,7 +29,7 @@ class AppMaxNotificationController extends Controller
 
 		return response()->json( $data );
     }
-    
+
 	/**
      * Store a newly created resource in storage.
      *
